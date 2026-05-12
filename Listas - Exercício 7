@@ -1,0 +1,32 @@
+# #Exercício 1
+
+# import random
+
+# A = []
+
+# for i in range(10): 
+#     A.append(random.randint(1, 100))
+
+# print("Lista A:", A)
+
+# #Exercício 2
+
+# A = []
+# contador = 0
+
+# while contador < 3:
+#     n = int(input("insira um número: "))
+#     A.append(n)
+#     contador += 1
+
+# print(A)
+
+#Exercício 3
+
+A = []
+
+n = input("Escreva seu nome: ")
+
+A.append(n)
+
+print(A)
