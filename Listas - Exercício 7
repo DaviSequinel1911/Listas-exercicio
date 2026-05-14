@@ -1,113 +1,113 @@
-# #Exercício 1
+#Exercício 1
 
 import random
 
-# A = []
+A = []
 
-# for i in range(10): 
-#     A.append(random.randint(1, 100))
+for i in range(10): 
+    A.append(random.randint(1, 100))
 
-# print("Lista A:", A)
+print("Lista A:", A)
 
-# #Exercício 2
+#Exercício 2
 
-# A = []
-# contador = 0
+A = []
+contador = 0
 
-# while contador < 3:
-#     n = int(input("insira um número: "))
-#     A.append(n)
-#     contador += 1
+while contador < 3:
+    n = int(input("insira um número: "))
+    A.append(n)
+    contador += 1
 
-# print(A)
+print(A)
 
-# #Exercício 3
+#Exercício 3
 
-# A = []
+A = []
 
-# n = input("Escreva seu nome: ")
+n = input("Escreva seu nome: ")
 
-# A.append(n)
+A.append(n)
 
-# print(A)
+print(A)
 
-# #Exercício 4
+#Exercício 4
 
-# A = []
-# n = 1
+A = []
+n = 1
 
-# while n < 11:
-#     A.append(n)
-#     n += 1
+while n < 11:
+    A.append(n)
+    n += 1
 
-# A.reverse()
-# print(A)
+A.reverse()
+print(A)
 
-# #Exercício 5
+#Exercício 5
 
-# A = []
-# contador = 0
+A = []
+contador = 0
 
-# while contador < 5:
-#     nome = input("Digite uma palavra: ")
-#     A.append(nome)
-#     contador += 1
-# print(A)
-# print(min(A, key=len))
-# print(max(A, key=len))
+while contador < 5:
+    nome = input("Digite uma palavra: ")
+    A.append(nome)
+    contador += 1
+print(A)
+print(min(A, key=len))
+print(max(A, key=len))
 
-# #Exercício 6
+#Exercício 6
 
-# A = []
-# B = []
-# C = []
-# contador = 1
+A = []
+B = []
+C = []
+contador = 1
 
-# while contador < 11:
-#     if contador%2 == 0:
-#         A.append(contador)
-#     else:
-#         B.append(contador)
-#     contador += 1
+while contador < 11:
+    if contador%2 == 0:
+        A.append(contador)
+    else:
+        B.append(contador)
+    contador += 1
 
-# C.append(A)
-# C.append(B)
+C.append(A)
+C.append(B)
 
-# print(C)
+print(C)
 
-# #Exercício 7
+#Exercício 7
 
-# A = []
-# contador = 2
+A = []
+contador = 2
 
-# while contador < 101:
-#     A.append(contador)
-#     contador += 2
+while contador < 101:
+    A.append(contador)
+    contador += 2
 
-# print(A)
+print(A)
 
-# #Exercício 8
+#Exercício 8
 
-# A = []
-# contador = 1
-# while contador < 11:
-#     A.append(contador*contador)
-#     contador += 1
+A = []
+contador = 1
+while contador < 11:
+    A.append(contador*contador)
+    contador += 1
 
-# print(sum(A))
+print(sum(A))
 
-# #Exercício 9
+#Exercício 9
 
-# A = list("abcdefghijklmnopqrstuvwxyz")
-# n = random.randint(0, 25)
+A = list("abcdefghijklmnopqrstuvwxyz")
+n = random.randint(0, 25)
 
-# print(A[n])
-# letra = int(input("Qual é a posição dessa letra no alfabeto?: "))
+print(A[n])
+letra = int(input("Qual é a posição dessa letra no alfabeto?: "))
 
-# if n+1 == letra:
-#     print("Você acertou!")
-# elif n+1 != letra:
-#     print("Você errou :(")
+if n+1 == letra:
+    print("Você acertou!")
+elif n+1 != letra:
+    print("Você errou :(")
 
 #Exercício 10
 
