@@ -1,6 +1,6 @@
 # #Exercício 1
 
-# import random
+import random
 
 # A = []
 
@@ -21,12 +21,198 @@
 
 # print(A)
 
-#Exercício 3
+# #Exercício 3
 
-A = []
+# A = []
 
-n = input("Escreva seu nome: ")
+# n = input("Escreva seu nome: ")
 
-A.append(n)
+# A.append(n)
 
-print(A)
+# print(A)
+
+# #Exercício 4
+
+# A = []
+# n = 1
+
+# while n < 11:
+#     A.append(n)
+#     n += 1
+
+# A.reverse()
+# print(A)
+
+# #Exercício 5
+
+# A = []
+# contador = 0
+
+# while contador < 5:
+#     nome = input("Digite uma palavra: ")
+#     A.append(nome)
+#     contador += 1
+# print(A)
+# print(min(A, key=len))
+# print(max(A, key=len))
+
+# #Exercício 6
+
+# A = []
+# B = []
+# C = []
+# contador = 1
+
+# while contador < 11:
+#     if contador%2 == 0:
+#         A.append(contador)
+#     else:
+#         B.append(contador)
+#     contador += 1
+
+# C.append(A)
+# C.append(B)
+
+# print(C)
+
+# #Exercício 7
+
+# A = []
+# contador = 2
+
+# while contador < 101:
+#     A.append(contador)
+#     contador += 2
+
+# print(A)
+
+# #Exercício 8
+
+# A = []
+# contador = 1
+# while contador < 11:
+#     A.append(contador*contador)
+#     contador += 1
+
+# print(sum(A))
+
+# #Exercício 9
+
+# A = list("abcdefghijklmnopqrstuvwxyz")
+# n = random.randint(0, 25)
+
+# print(A[n])
+# letra = int(input("Qual é a posição dessa letra no alfabeto?: "))
+
+# if n+1 == letra:
+#     print("Você acertou!")
+# elif n+1 != letra:
+#     print("Você errou :(")
+
+#Exercício 10
+
+A = ["Pedra", "Papel", "Tesoura"]
+placar = [0, 0]
+opcao= -1
+
+
+while opcao != 0:
+    opcao = int(input("Jokenpo\n escolha uma opção\n 1 - computador x computador\n 2 - computador x jogador\n 3 - jogador x jogador\n 0 - Sair\n digite aqui: \n"))
+    
+    if opcao == 1:
+        while opcao == 1:
+            j1 = random.randint(0, 2)
+            j2 = random.randint(0, 2)
+
+            print("\nRodada")
+            print("Computador 1:", A[j1], "VS Computador 2:", A[j2])
+            print("")
+
+            if j1 == j2:
+                print("Empate")
+            elif (j1 == 0 and j2 == 1) or (j1 == 1 and j2 == 2) or (j1 == 2 and j2 == 0):
+                placar.insert(1, +1)
+                print("Computador 2 venceu")
+            elif (j1 == 0 and j2 == 2) or (j1 == 1 and j2 == 0) or (j1 == 2 and j2 == 1):
+                placar.insert(0, +1)
+                print("Computador 1 venceu")
+
+            print("O Placar é: \nComputador 1:", placar[0], "\nComputador 2:", placar[1])
+            round = int(input("Deseja jogar novamente? 1- sim / 2- não: \n "))
+            if round == 1:
+                opcao == 1
+            elif round == 2:
+                print("O Resultado final Foi: \nComputador 1:", placar[0], "\nComputador 2:", placar[1])
+                opcao == 0
+                print("Obrigado por jogar. \n Feito por Davi e Kaique")
+                break
+    elif opcao == 2:
+        while opcao == 2:
+            j1 = int(input("Jogador, escolha uma opção:\n 1 - Pedra \n 2 - Papel \n 3 - Tesoura \n"))
+            j2 = random.randint(0, 2)
+            while j1 <= 0 or j1 > 3:
+                j1 = int(input("Opção inválida, digite novamente: \n Jogador 1 digite novamente \n 1 - Tesoura \n 2 - pedra \n 3 - papel \n"))
+
+            
+            print("\nRodada")
+            print("Jogador:", A[j1-1], "VS Computador:", A[j2])
+            print("")
+
+            if j1-1 == j2:
+                print("Empate")
+            elif (j1-1 == 0 and j2 == 1) or (j1-1 == 1 and j2 == 2) or (j1-1 == 2 and j2 == 0):
+                placar.insert(1, +1)
+                print("Computador ganhou")
+            elif (j1-1 == 0 and j2 == 2) or (j1-1 == 1 and j2 == 0) or (j1-1 == 2 and j2 == 1):
+                placar.insert(0, +1)
+                print("Jogador ganhou")
+
+            print("O Placar é: \nJogador:", placar[0], "\nComputador:", placar[1])
+            round = int(input("Deseja jogar novamente? 1- sim / 2- não: \n "))
+            if round == 1:
+                opcao == 2
+            elif round == 2:
+                print("O Resultado final Foi: \nJogador:", placar[0], "\nComputador:", placar[1])
+                opcao == 0
+                print("\nObrigado por jogar. \n Feito por Davi e Kaique")
+                break
+    
+    elif opcao == 3:
+    # loop da partida -> dentro do modo do jogo 3
+        while opcao == 3:
+            j1 = int(input("Jogador 1, escolha uma opção:\n 1 - Pedra \n 2 - Papel \n 3 - Tesoura \n"))
+            j2 = int(input("Jogador 2, escolha uma opção:\n 1 - Pedra \n 2 - Papel \n 3 - Tesoura \n"))
+            
+            print("\nRodada")
+            print("Jogador 1:", A[j1-1], "VS Jogador 2:", A[j2-1])
+            print("")
+            # loop de validação de input
+            while j1 <= 0 or j1 > 3 or j2 <= 0 or j2 > 3:
+                j1 = int(input("Uma ou duas opções inválidas \n Jogador 1 digite novamente \n 1 - Tesoura \n 2 - pedra \n 3 - papel \n"))
+                j2 = int(input("Jogador 2 digite novamente \n 1 - Tesoura \n 2 - pedra \n 3 - papel \n "))
+
+            if j1 == j2:
+                print("Empate")
+            elif (j1-1 == 0 and j2-1 == 1) or (j1-1 == 1 and j2-1 == 2) or (j1-1 == 2 and j2-1 == 0):
+                placar.insert(1, +1)
+                print("J2 ganhou")
+            elif (j1-1 == 0 and j2-1 == 2) or (j1-1 == 1 and j2-1 == 0) or (j1-1 == 2 and j2-1 == 1):
+                placar.insert(0, +1)
+                print("J1 ganhou")
+
+            print("O Placar é: \njogador 1:", placar[0],"\njogador 2:", placar[1])
+            round = int(input("Deseja jogar novamente? 1- sim / 2- não: \n "))
+            if round == 1:
+                opcao == 3
+            elif round == 2:
+                print("O Resultado Foi: \njogador 1:", placar[0],"\njogador 2:", placar[1])
+                opcao == 0
+                print("Obrigado por jogar. \n Feito por Davi e Kaique")
+                break
+    
+    elif opcao == 0:
+        print("Programa encerrado\nObrigado por jogar. \n Feito por Davi e Kaique")
+    elif opcao >3 or opcao <0:
+        print("Opção inválida, reinicie o programa e escolha uma opção válida.")
+
+    break
